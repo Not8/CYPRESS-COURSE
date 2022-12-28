@@ -7,4 +7,5 @@ export default defineConfig({
       
     },
   },
+  //pageLoadTimeout:2000
 });
