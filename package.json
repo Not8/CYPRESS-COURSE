@@ -4,7 +4,7 @@
   "description": "Curso de cypress",
   "main": "index.js",
   "scripts": {
-    "runner": "cypress open --e2e --browser chrome --config baseUrl=http://uitestingplayground.com/"
+    "runner": "cypress open --e2e --browser chrome --config baseUrl=http://uitestingplayground.com/ --env demoVar=awsd"
   },
   "keywords": [
     "cypress",
@@ -16,6 +16,7 @@
   "license": "ISC",
   "devDependencies": {
     "cypress": "^12.2.0",
+    "cypress-real-events": "^1.7.6",
     "typescript": "^4.9.4"
   },
   "dependencies": {

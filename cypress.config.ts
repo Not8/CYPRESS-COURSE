@@ -6,6 +6,12 @@ export default defineConfig({
     setupNodeEvents(on, config) {
       
     },
+    env:{
+      demoVar: "Hi!", 
+      demoQA: "https://demoqa.com/",
+      herokuApp: "https://the-internet.herokuapp.com/",
+      globalSqa: "https://www.globalsqa.com/",
+    },
   },
   //pageLoadTimeout:2000
 });
