@@ -1,10 +1,12 @@
 import { defineConfig } from "cypress";
 
+const { verifyDownloadTasks } = require('cy-verify-downloads');
+
 export default defineConfig({
   e2e: {
     baseUrl: "http://uitestingplayground.com/",
     setupNodeEvents(on, config) {
-      
+      on('task', verifyDownloadTasks);
     },
     env:{
       demoVar: "Hi!", 
