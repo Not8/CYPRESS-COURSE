@@ -1,0 +1,27 @@
+class Login{
+    private username:string = '#userName'
+    private password:string = '#password'
+    private loginButton:string = '#login'
+    private validLoginHeader:string = `//div[@class='main-header']`
+    private validUsernamText:string = `#userName-value`
+
+    get usernameElement(): Cypress.Chainable<JQuery<HTMLElement>>{
+        return cy.get(this.username)
+    }
+
+    get passwordElement(): Cypress.Chainable<JQuery<HTMLElement>>{
+        return cy.get(this.password)
+    }
+
+    submitLogin(username: string, password: string):void{
+        cy.get(this.username).type(username)
+        cy.get(this.password).type(password)
+        cy.get(this.loginButton).click()
+    }
+
+    visit(): void{
+        cy.visit(`${Cypress.env("demoQA")}login`)
+    }
+}
+
+export const LoginObject = new Login()

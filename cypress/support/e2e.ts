@@ -19,6 +19,7 @@ require('@cypress/xpath')
 import './commands'
 import './exceptions'
 import 'cypress-real-events/support'
+import { LoginObject } from '../pages/Login';
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
