@@ -3,3 +3,9 @@ export interface testData{
     email:string|boolean;
     body:string;
 }
+
+export interface User{
+    name:string;
+    email:string|boolean;
+    body:string;
+}
