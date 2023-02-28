@@ -34,10 +34,15 @@ declare global {
   namespace Cypress {
     interface Chainable {
       login(email: string, password: string): Chainable<void>
+      parseXlsx(inputFile: any): any;
     }
   }
 }
 
 Cypress.Commands.add(`login`, (username:string, password:string)=>{
     LoginObject.submitLogin(username, password)
+})
+
+Cypress.Commands.add("parseXlsx", (inputFile) =>{
+  return cy.task("parseXlsx", {filePath: inputFile});
 })
