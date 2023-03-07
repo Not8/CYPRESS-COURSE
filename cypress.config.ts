@@ -32,6 +32,7 @@ export default defineConfig({
     },
     env:{
       demoVar: "Hi!", 
+      mobileViewportBreackpoint: 400,
       demoQA: "https://demoqa.com/",
       herokuApp: "https://the-internet.herokuapp.com/",
       globalSqa: "https://www.globalsqa.com/",
